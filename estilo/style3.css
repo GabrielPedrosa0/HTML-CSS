@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0
+}
+
+body{
+    background-color: black;
+}
+
+header{
+    border: 2px solid red;
+    height: auto;
+    display: flex;
+}
+
+.i1{
+    margin: 2px;
+    width: 90px;
+    height: 90px;
+    background-image: url(imagens/logop.png);
+    background-size: cover;
+    background-position: center;
+}
+
+nav{
+    display: flex;
+    position: relative;
+    margin: 2px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+nav a{
+    border: 2px solid #ffffff5e;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    display: flex;
+    height: 30px;
+    width: 70px;
+    align-items: center;
+    justify-content: center;
+}
+
+nav a:hover{
+    text-decoration: underline;
+    transition: all 0.3s ease;
+    color: aqua;
+}
+
+main{
+    color: #fff;
+    display: flex;
+    position: relative;
+    border: 2px solid white;
+    height: 500px;
+    margin: 5px;
+}
+
+article{
+    border: 2px solid greenyellow;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    padding: 5px;
+    width: 100%;
+}
+
+.texto{
+    border: 2px solid blue;
+    display: flex;
+    height: 200px;
+    width: 500px;
+    text-align: justify;
+    margin: 5px;
+    padding: 5px;
+}
+
+.i2{
+    border: 2px solid yellow;
+    height: 250px;
+    width: 500px;
+    margin: 5px;
+
+}
