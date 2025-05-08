@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="/MQ/MQh/estilos/MQ4.css">
+    <link rel="stylesheet" href="/MQ/MQh/estilos/MQs4.css">
+    <title>Menu Responsivel</title>
+</head>
+<body onresize="mudouTamanho()">
+
+    <header>
+        <h1>Meu Site</h1>
+        <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">
+            menu
+            </span>
+        <menu id="itens">
+            <ul>
+                <li><a href="#">Opção 1</a></li>
+                <li><a href="#">Opção 2</a></li>
+                <li><a href="#">Opção 3</a></li>
+                <li><a href="#">Opção 4</a></li>
+            </ul>
+        </menu>
+    </header>
+    
+    <main>
+        <article>
+            <h2>Testando Media Query</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat porro, dolorem non rerum debitis unde laboriosam nam iusto alias, minima ratione architecto incidunt laudantium officia pariatur excepturi? Obcaecati, maiores nisi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, pariatur, nemo optio officiis dolor dolore quibusdam recusandae porro veritatis explicabo dolorem rerum cupiditate eligendi cumque commodi. Odit incidunt eaque omnis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis excepturi quia maiores tempora eum nobis assumenda, fugiat sequi cupiditate voluptates nihil neque dolor! Maiores provident saepe quia dolore, a voluptatem?
+                Vitae quibusdam veniam dolore odio fuga nam perferendis asperiores natus labore delectus. Vitae consequatur rem nam aperiam non totam dolorum dolores. Minima ipsam quidem ratione quibusdam impedit quam ipsa laborum.
+                A doloremque ipsam, voluptates in officiis voluptatem incidunt commodi quibusdam veritatis? Cum neque delectus ad eius tempora laboriosam dolores molestias animi earum eos. Numquam, voluptas quod? Quaerat itaque dignissimos vitae!
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere sequi consequuntur ut? Omnis neque mollitia a cupiditate exercitationem nulla voluptatem odio quis ad quae, quos molestiae laborum, modi voluptatum soluta. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita et ipsum eligendi similique est hic nisi ratione explicabo qui, facilis sed dolore ullam accusamus deserunt optio iure. Nisi, explicabo nostrum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias dicta omnis consequatur vitae ducimus nemo esse a quam dolorem, tenetur perferendis nobis aspernatur, consectetur asperiores reiciendis suscipit temporibus tempora unde.
+                Eum porro nemo ullam ea quaerat atque. Minus, cumque! Nemo, excepturi! Saepe doloribus amet quia, assumenda harum excepturi iste recusandae quisquam ipsa a cum libero, dolor soluta eius culpa atque?
+                Nemo in ratione quisquam culpa quidem incidunt deserunt? Ut dignissimos recusandae distinctio doloremque rerum eaque, velit voluptate ex sit fugiat hic iusto mollitia aspernatur voluptates consectetur assumenda pariatur blanditiis? Aut?
+            </p>
+            <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi exercitationem, obcaecati aut vel magni recusandae repellendus eveniet ipsam, quam accusamus nihil qui, adipisci similique in quos sint nulla nisi suscipit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, sit exercitationem. Odit vel quidem repudiandae illum natus reprehenderit voluptatibus. Vel alias veniam reprehenderit consequatur aut aperiam qui, placeat optio excepturi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque necessitatibus, fugiat neque dolores voluptas ratione fugit incidunt, placeat iste vitae alias nihil tenetur expedita laudantium, voluptatibus at magni asperiores quo!
+                Voluptates assumenda rem consectetur sed ipsa saepe tempora veritatis et sapiente dolorem officia magni quia ratione aliquid nam non vero nihil placeat voluptatum earum quos obcaecati vitae, quo delectus. Animi?
+                Accusamus ratione sed iure quisquam eum quis necessitatibus enim error. Nam tenetur voluptas esse facilis quam in, facere sit consequuntur ea excepturi iure fugiat deserunt tempore molestias ipsum suscipit iusto.
+            </p>
+        </article>
+    </main>
+
+    <script>
+        
+        function mudouTamanho() {
+            if (window.innerWidth >= 768) {
+                itens.style.display == 'block'
+            }  else {
+                itens.style.display == 'none'
+            }
+        }
+
+        function clickMenu() {
+            if (itens.style.display == 'block') {
+                itens.style.display = 'none'
+            } else {
+                itens.style.display = 'block'
+            }
+
+        }
+
+        
+
+    </script>
+
+</body>
+</html>
