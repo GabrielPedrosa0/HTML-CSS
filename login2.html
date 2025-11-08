@@ -9,15 +9,15 @@
 </head>
 <body>
 
-    <div class="corpo">
+    <div class="corpo" id="corpo">
         <form action=""> <!--motivo pelo qual não estava dando certo da última vez, não estavão dentro do form-->
             <h1 id="resposta">Olá</h1>
             <div class="input-box">
-                <input type="text" placeholder="Usuário" required>
+                <input type="text" placeholder="Usuário" required id="user">
                 <i class='bx bxs-user'></i>
             </div>
             <div class="input-box">
-                <input type="password" placeholder="Senha">
+                <input type="password" placeholder="Senha" id="pass">
                 <i class='bx bxs-lock-alt'></i>
             </div>
 
@@ -32,8 +32,56 @@
                 <p>Ainda não tem uma conta? <a href="cadastro.html">Registrar</a></p>
             </div>
         </form>
+
+        <div class="notificacao" id="notificacao">
+            <p>Porfavor, preencha todos os campos corretamentes.</p>
+        </div>
         
     </div>
+
+<script>
+
+    document.getElementById('corpo').addEventListener('submit', function(event) {
+        const notificacao = document.getElementById('notificacao')
+        const campos = [
+            document.getElementById('user'),
+            document.getElementById('pass')
+        ]
+
+        //configuraçoes adicinais pq como estava, não estava funcionado
+        let campoVazio = false
+
+        //verifica se o campo esta vazio
+        campos.forEach(campo => {
+            if (campo.value.trim() === '') {
+                event.preventDefault()
+                notificacao.style.display = 'block'
+                campo.style.border = '1px solid red'
+                campo.focus()
+                campoVazio = true
+                return //sai do forEach se encontrar um campo vazio
+            } else {
+                campo.style.border = '' //remove a borda vermelha se preencido
+            }
+        })
+
+        if (campoVazio) {
+            setTimeout(() => {
+                notificacao.style.display = 'none'
+            }, 5000)
+        } else {
+            notificacao.style.display = 'none'
+        }
+
+        campos.forEach(campo => {
+            campo.addEventListener('input', function() {
+                if (this.value.trim() !== '') {
+                    this.style.border = 'none' //remove o destaque do campo indicado quando digitado
+                }
+            })
+        })
+    }) 
+</script>
 
 </body>
 </html>
